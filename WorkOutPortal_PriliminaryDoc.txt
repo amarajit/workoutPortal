@@ -1,0 +1,80 @@
+
+	Maveen
+	
+	Spring-Boot
+	Spring Web MVC		(RESTful Services)
+	Spring Security
+	Spring Caching
+	
+	Spring ORM with Hibernate
+	
+	log4j
+	
+	JUnit
+	
+	Angular JS 2 + (HTML,CSS, TypeScript) on angular CLI
+	Angular Testing
+	
+	GitHub
+	Jenkins 
+	Docker
+			
+Case Study
+
+	Workout-portal
+	--------------------
+	1. User Registration and Loging
+	2. Each user once logs in can define his own
+	workout wid,title,amountOfCalPerUnittime,UnitTime	
+	3. Each user once logs in can start and stop a specific workout
+		3.1 we need to comput the duratona nd calsBurnt
+	4. Logout
+	
+	Day Wise Schedule
+	------------------------
+	Day1	Setup environment
+	Day2	DTO and DAO		
+	Day3	WebServices
+	Day4	WebServices and Caching config
+	Day5	Testing 
+	Day6	Testing
+	Day7	Configure Spring Security on JDBC
+	Day8	User Interfaces
+	Day9	User Interfaces
+	Day10	Deployment
+	
+	
+	
+	Entities
+---------------------
+				1:n				 1:n
+		User --------- Workout ------- workoutTransaciton
+
+	User
+		userId		: long
+		userName	: String
+		password	: String
+		
+	WorkOut
+		workoutId				: long
+		title					: String
+		calBurntPerUnitTime		: double
+		unitTime				: UnitTime
+		userId					: long
+		
+	UnitTime	: enum
+		HOUR,MINUTE,SECOND
+	
+	WorkOutTransaction
+		txnId			:	long
+		workoutId		:	long
+		startTime		:	java.time.LocalDateTime
+		stopTime		:	java.time.LocalDateTime
+		duration		:	java.time.Duration
+		calsBurnt		:	double
+		
+		
+		
+	
+	
+	
